@@ -1,41 +1,59 @@
 {% extends "base.html" %}
 {% block title %}{{ user.name }} - MovieApp{% endblock %}
-{% block content %}
-  <p><a href="{{ url_for('index') }}">&larr; Back to Users</a></p>
-  <h1>Movies for {{ user.name }} <span class="count">{{ movies|length }}</span></h1>
-
-  <section class="card form-card">
-    <h2>Add a movie</h2>
-    <form action="{{ url_for('add_movie', user_id=user.id) }}" method="POST" class="inline-form"
-          data-loading="Searching OMDb...">
+{% block body_class %}edition-{{ user.id % 8 }}{% endblock %}
+{% block band %}
+  <section class="band">
+    <a class="back" href="{{ url_for('index') }}"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>Back to Users</a>
+    <h1>Movies for {{ user.name }}</h1>
+    <p class="band-meta"><span>Nº {{ '%02d' % user.id }}</span> {{ movies|length }} film{{ "" if movies|length == 1 else "s" }} on the shelf</p>
+    <form action="{{ url_for('add_movie', user_id=user.id) }}" method="POST" class="field-row band-form"
+          data-loading="Searching OMDb…">
       <label class="visually-hidden" for="title">Movie title</label>
-      <input type="text" id="title" name="title" placeholder="Movie title, e.g. Titanic" required maxlength="200">
-      <button type="submit">Add movie</button>
+      <input type="text" id="title" name="title" placeholder="Movie title, e.g. Titanic" required maxlength="200" autocomplete="off">
+      <button type="submit" class="button">Add movie</button>
     </form>
   </section>
-
-  <ul class="movies">
-    {% for movie in movies %}
-    <li class="movie card">
-      {% if movie.poster_url %}
-      <img src="{{ movie.poster_url }}" alt="Poster of {{ movie.name }}" loading="lazy">
-      {% else %}
-      <div class="no-poster">No poster</div>
-      {% endif %}
-      <form action="{{ url_for('update_movie', user_id=user.id, movie_id=movie.id) }}" method="POST" class="update-form">
-        <label class="visually-hidden" for="title-{{ movie.id }}">Title</label>
-        <input type="text" id="title-{{ movie.id }}" name="title" value="{{ movie.name }}" required maxlength="200">
-        <button type="submit">Update</button>
-      </form>
-      <p><strong>Year:</strong> {{ movie.year or "unknown" }}</p>
-      <p><strong>Director:</strong> {{ movie.director or "unknown" }}</p>
-      <form action="{{ url_for('delete_movie', user_id=user.id, movie_id=movie.id) }}" method="POST"
-            onsubmit="return confirm('Remove this movie from the list?');">
-        <button type="submit" class="danger">Delete</button>
-      </form>
+{% endblock %}
+{% block content %}
+  {% set order = movies|map(attribute='id')|sort|list %}
+  {% if movies %}
+  <ul class="editions" aria-label="Movies">
+    {% for movie in movies|sort(attribute='id') %}
+    <li class="edition">
+      <div class="cover-wrap">
+        <span class="cover-spine" aria-hidden="true">
+          <span class="cover-spine-title">{{ movie.name }}</span>
+          <span class="cover-spine-no"><span class="no-prefix">Nº </span>{{ '%03d' % (order.index(movie.id) + 1) }}</span>
+        </span>
+        {% if movie.poster_url %}
+        <img class="cover" src="{{ movie.poster_url }}" alt="Poster of {{ movie.name }}" loading="lazy">
+        {% else %}
+        <div class="cover cover-blank"><span>{{ movie.name }}</span></div>
+        {% endif %}
+      </div>
+      <div class="edition-body">
+        <form action="{{ url_for('update_movie', user_id=user.id, movie_id=movie.id) }}" method="POST" class="rename">
+          <label class="visually-hidden" for="title-{{ movie.id }}">Title of {{ movie.name }}</label>
+          <div class="field-row">
+            <input type="text" id="title-{{ movie.id }}" name="title" value="{{ movie.name }}" required maxlength="200">
+            <button type="submit" class="button button-quiet">Update</button>
+          </div>
+        </form>
+        <dl class="facts">
+          <div><dt>Year</dt><dd>{{ movie.year or "unknown" }}</dd></div>
+          <div><dt>Director</dt><dd>{{ movie.director or "unknown" }}</dd></div>
+        </dl>
+        <form action="{{ url_for('delete_movie', user_id=user.id, movie_id=movie.id) }}" method="POST"
+              onsubmit="return confirm('Remove this movie from the list?');">
+          <button type="submit" class="button button-danger">Delete</button>
+        </form>
+      </div>
     </li>
-    {% else %}
-    <li class="empty">No favorite movies yet. Add one above.</li>
     {% endfor %}
   </ul>
+  {% else %}
+  <div class="empty-shelf">
+    <p>No favorite movies yet. Add one by its title above; poster, year and director come from OMDb.</p>
+  </div>
+  {% endif %}
 {% endblock %}

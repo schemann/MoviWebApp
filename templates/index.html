@@ -1,29 +1,38 @@
 {% extends "base.html" %}
 {% block title %}Users - MovieApp{% endblock %}
 {% block content %}
-  <h1>Users</h1>
+  <div class="page-head">
+    <h1>Users</h1>
+    <p class="lede">Everyone keeps their own shelf. Pick yours.</p>
+  </div>
+
   {% if users %}
-  <ul class="users">
-    {% for user in users %}
+  <ul class="shelf" aria-label="Users">
+    {% for user in users|sort(attribute='id') %}
+    {% set count = user.movies|length %}
     <li>
-      <a class="user-card" href="{{ url_for('list_movies', user_id=user.id) }}">
-        <span class="avatar" aria-hidden="true">{{ user.name[:1]|upper }}</span>
-        <span class="user-name">{{ user.name }}</span>
-        <span class="user-meta">{{ user.movies|length }} movie{{ "" if user.movies|length == 1 else "s" }}</span>
+      <a class="spine edition-{{ user.id % 8 }}" href="{{ url_for('list_movies', user_id=user.id) }}">
+        <span class="spine-title">{{ user.name }}</span>
+        <span class="spine-foot">
+          <span class="spine-no">Nº {{ '%02d' % user.id }}</span>
+          <span class="spine-count">{{ count }} film{{ "" if count == 1 else "s" }}</span>
+        </span>
       </a>
     </li>
     {% endfor %}
   </ul>
   {% else %}
-  <p class="empty">No users yet. Add the first one below.</p>
+  <div class="empty-shelf">
+    <p>The shelf is empty. Add the first person below.</p>
+  </div>
   {% endif %}
 
-  <section class="card form-card">
-    <h2>Add a user</h2>
-    <form action="{{ url_for('create_user') }}" method="POST" class="inline-form">
+  <section class="panel" aria-labelledby="add-user-heading">
+    <h2 id="add-user-heading">Add a user</h2>
+    <form action="{{ url_for('create_user') }}" method="POST" class="field-row">
       <label class="visually-hidden" for="name">Name</label>
-      <input type="text" id="name" name="name" placeholder="Name" required maxlength="100">
-      <button type="submit">Add user</button>
+      <input type="text" id="name" name="name" placeholder="Name" required maxlength="100" autocomplete="off">
+      <button type="submit" class="button">Add user</button>
     </form>
   </section>
 {% endblock %}

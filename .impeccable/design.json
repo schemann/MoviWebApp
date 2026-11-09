@@ -1,0 +1,586 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-09T16:35:26+00:00",
+  "title": "Design System: MovieApp",
+  "extensions": {
+    "colorMeta": {
+      "wall": {
+        "role": "neutral",
+        "displayName": "Cool Wall",
+        "canonical": "#e9ecef",
+        "tonalRamp": [
+          "oklch(15% 0.005 247.9)",
+          "oklch(25% 0.005 247.9)",
+          "oklch(35% 0.005 247.9)",
+          "oklch(45% 0.005 247.9)",
+          "oklch(55% 0.005 247.9)",
+          "oklch(65% 0.005 247.9)",
+          "oklch(80% 0.005 247.9)",
+          "oklch(95% 0.005 247.9)"
+        ]
+      },
+      "wall-deep": {
+        "role": "neutral",
+        "displayName": "Wall Shadow",
+        "canonical": "#dde1e6",
+        "tonalRamp": [
+          "oklch(15% 0.008 253.9)",
+          "oklch(25% 0.008 253.9)",
+          "oklch(35% 0.008 253.9)",
+          "oklch(45% 0.008 253.9)",
+          "oklch(55% 0.008 253.9)",
+          "oklch(65% 0.008 253.9)",
+          "oklch(80% 0.008 253.9)",
+          "oklch(95% 0.008 253.9)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Paper White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0.000 89.9)",
+          "oklch(25% 0.000 89.9)",
+          "oklch(35% 0.000 89.9)",
+          "oklch(45% 0.000 89.9)",
+          "oklch(55% 0.000 89.9)",
+          "oklch(65% 0.000 89.9)",
+          "oklch(80% 0.000 89.9)",
+          "oklch(95% 0.000 89.9)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Shelf Ink",
+        "canonical": "#16181d",
+        "tonalRamp": [
+          "oklch(15% 0.010 268.2)",
+          "oklch(25% 0.010 268.2)",
+          "oklch(35% 0.010 268.2)",
+          "oklch(45% 0.010 268.2)",
+          "oklch(55% 0.010 268.2)",
+          "oklch(65% 0.010 268.2)",
+          "oklch(80% 0.010 268.2)",
+          "oklch(95% 0.010 268.2)"
+        ]
+      },
+      "ink-soft": {
+        "role": "primary-on",
+        "displayName": "Shelf Ink Soft Ink",
+        "canonical": "#4a515c",
+        "note": "Secondary text on the Shelf Ink ground (>= 4.5:1)."
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#c9cfd6",
+        "tonalRamp": [
+          "oklch(15% 0.012 252.1)",
+          "oklch(25% 0.012 252.1)",
+          "oklch(35% 0.012 252.1)",
+          "oklch(45% 0.012 252.1)",
+          "oklch(55% 0.012 252.1)",
+          "oklch(65% 0.012 252.1)",
+          "oklch(80% 0.012 252.1)",
+          "oklch(95% 0.012 252.1)"
+        ]
+      },
+      "plank": {
+        "role": "neutral",
+        "displayName": "Plank",
+        "canonical": "#16181d",
+        "tonalRamp": [
+          "oklch(15% 0.010 268.2)",
+          "oklch(25% 0.010 268.2)",
+          "oklch(35% 0.010 268.2)",
+          "oklch(45% 0.010 268.2)",
+          "oklch(55% 0.010 268.2)",
+          "oklch(65% 0.010 268.2)",
+          "oklch(80% 0.010 268.2)",
+          "oklch(95% 0.010 268.2)"
+        ]
+      },
+      "ok": {
+        "role": "status",
+        "displayName": "Kept Green",
+        "canonical": "#0e6e4f",
+        "tonalRamp": [
+          "oklch(15% 0.080 164.7)",
+          "oklch(25% 0.080 164.7)",
+          "oklch(35% 0.097 164.7)",
+          "oklch(45% 0.097 164.7)",
+          "oklch(55% 0.097 164.7)",
+          "oklch(65% 0.097 164.7)",
+          "oklch(80% 0.097 164.7)",
+          "oklch(95% 0.080 164.7)"
+        ]
+      },
+      "ok-bg": {
+        "role": "status",
+        "displayName": "Kept Green Ground",
+        "canonical": "#e2f2ea",
+        "tonalRamp": [
+          "oklch(15% 0.020 164.6)",
+          "oklch(25% 0.020 164.6)",
+          "oklch(35% 0.020 164.6)",
+          "oklch(45% 0.020 164.6)",
+          "oklch(55% 0.020 164.6)",
+          "oklch(65% 0.020 164.6)",
+          "oklch(80% 0.020 164.6)",
+          "oklch(95% 0.020 164.6)"
+        ]
+      },
+      "err": {
+        "role": "status",
+        "displayName": "Error Red",
+        "canonical": "#a32637",
+        "tonalRamp": [
+          "oklch(15% 0.080 18.7)",
+          "oklch(25% 0.080 18.7)",
+          "oklch(35% 0.160 18.7)",
+          "oklch(45% 0.160 18.7)",
+          "oklch(55% 0.160 18.7)",
+          "oklch(65% 0.160 18.7)",
+          "oklch(80% 0.160 18.7)",
+          "oklch(95% 0.080 18.7)"
+        ]
+      },
+      "err-bg": {
+        "role": "status",
+        "displayName": "Error Red Ground",
+        "canonical": "#fbe6e9",
+        "tonalRamp": [
+          "oklch(15% 0.023 7.7)",
+          "oklch(25% 0.023 7.7)",
+          "oklch(35% 0.023 7.7)",
+          "oklch(45% 0.023 7.7)",
+          "oklch(55% 0.023 7.7)",
+          "oklch(65% 0.023 7.7)",
+          "oklch(80% 0.023 7.7)",
+          "oklch(95% 0.023 7.7)"
+        ]
+      },
+      "edition-teal": {
+        "role": "primary",
+        "displayName": "Shelf Teal",
+        "canonical": "#0b6b6b",
+        "tonalRamp": [
+          "oklch(15% 0.079 194.8)",
+          "oklch(25% 0.079 194.8)",
+          "oklch(35% 0.079 194.8)",
+          "oklch(45% 0.079 194.8)",
+          "oklch(55% 0.079 194.8)",
+          "oklch(65% 0.079 194.8)",
+          "oklch(80% 0.079 194.8)",
+          "oklch(95% 0.079 194.8)"
+        ]
+      },
+      "edition-teal-soft": {
+        "role": "primary-on",
+        "displayName": "Shelf Teal Soft Ink",
+        "canonical": "#d4ecec",
+        "note": "Secondary text on the Shelf Teal ground (>= 4.5:1)."
+      },
+      "edition-cobalt": {
+        "role": "primary",
+        "displayName": "Cobalt Edition",
+        "canonical": "#2b45b0",
+        "tonalRamp": [
+          "oklch(15% 0.080 267.9)",
+          "oklch(25% 0.080 267.9)",
+          "oklch(35% 0.173 267.9)",
+          "oklch(45% 0.173 267.9)",
+          "oklch(55% 0.173 267.9)",
+          "oklch(65% 0.173 267.9)",
+          "oklch(80% 0.173 267.9)",
+          "oklch(95% 0.080 267.9)"
+        ]
+      },
+      "edition-cobalt-soft": {
+        "role": "primary-on",
+        "displayName": "Cobalt Edition Soft Ink",
+        "canonical": "#dbe1fa",
+        "note": "Secondary text on the Cobalt Edition ground (>= 4.5:1)."
+      },
+      "edition-mustard": {
+        "role": "primary",
+        "displayName": "Mustard Cloth",
+        "canonical": "#e0a526",
+        "tonalRamp": [
+          "oklch(15% 0.080 80.8)",
+          "oklch(25% 0.080 80.8)",
+          "oklch(35% 0.147 80.8)",
+          "oklch(45% 0.147 80.8)",
+          "oklch(55% 0.147 80.8)",
+          "oklch(65% 0.147 80.8)",
+          "oklch(80% 0.147 80.8)",
+          "oklch(95% 0.080 80.8)"
+        ]
+      },
+      "edition-mustard-soft": {
+        "role": "primary-on",
+        "displayName": "Mustard Cloth Soft Ink",
+        "canonical": "#3b2c06",
+        "note": "Secondary text on the Mustard Cloth ground (>= 4.5:1)."
+      },
+      "edition-plum": {
+        "role": "primary",
+        "displayName": "Plum Binding",
+        "canonical": "#6a2c6e",
+        "tonalRamp": [
+          "oklch(15% 0.080 325.2)",
+          "oklch(25% 0.080 325.2)",
+          "oklch(35% 0.126 325.2)",
+          "oklch(45% 0.126 325.2)",
+          "oklch(55% 0.126 325.2)",
+          "oklch(65% 0.126 325.2)",
+          "oklch(80% 0.126 325.2)",
+          "oklch(95% 0.080 325.2)"
+        ]
+      },
+      "edition-plum-soft": {
+        "role": "primary-on",
+        "displayName": "Plum Binding Soft Ink",
+        "canonical": "#ecd9ee",
+        "note": "Secondary text on the Plum Binding ground (>= 4.5:1)."
+      },
+      "edition-moss": {
+        "role": "primary",
+        "displayName": "Moss Board",
+        "canonical": "#46601f",
+        "tonalRamp": [
+          "oklch(15% 0.080 128.3)",
+          "oklch(25% 0.080 128.3)",
+          "oklch(35% 0.097 128.3)",
+          "oklch(45% 0.097 128.3)",
+          "oklch(55% 0.097 128.3)",
+          "oklch(65% 0.097 128.3)",
+          "oklch(80% 0.097 128.3)",
+          "oklch(95% 0.080 128.3)"
+        ]
+      },
+      "edition-moss-soft": {
+        "role": "primary-on",
+        "displayName": "Moss Board Soft Ink",
+        "canonical": "#e1ebcf",
+        "note": "Secondary text on the Moss Board ground (>= 4.5:1)."
+      },
+      "edition-coral": {
+        "role": "primary",
+        "displayName": "Coral Jacket",
+        "canonical": "#c2405a",
+        "tonalRamp": [
+          "oklch(15% 0.080 12.4)",
+          "oklch(25% 0.080 12.4)",
+          "oklch(35% 0.166 12.4)",
+          "oklch(45% 0.166 12.4)",
+          "oklch(55% 0.166 12.4)",
+          "oklch(65% 0.166 12.4)",
+          "oklch(80% 0.166 12.4)",
+          "oklch(95% 0.080 12.4)"
+        ]
+      },
+      "edition-coral-soft": {
+        "role": "primary-on",
+        "displayName": "Coral Jacket Soft Ink",
+        "canonical": "#ffe3e8",
+        "note": "Secondary text on the Coral Jacket ground (>= 4.5:1)."
+      },
+      "edition-slate": {
+        "role": "primary",
+        "displayName": "Slate Linen",
+        "canonical": "#3d4f66",
+        "tonalRamp": [
+          "oklch(15% 0.045 254.8)",
+          "oklch(25% 0.045 254.8)",
+          "oklch(35% 0.045 254.8)",
+          "oklch(45% 0.045 254.8)",
+          "oklch(55% 0.045 254.8)",
+          "oklch(65% 0.045 254.8)",
+          "oklch(80% 0.045 254.8)",
+          "oklch(95% 0.045 254.8)"
+        ]
+      },
+      "edition-slate-soft": {
+        "role": "primary-on",
+        "displayName": "Slate Linen Soft Ink",
+        "canonical": "#dce4ee",
+        "note": "Secondary text on the Slate Linen ground (>= 4.5:1)."
+      },
+      "edition-emerald": {
+        "role": "primary",
+        "displayName": "Emerald Edition",
+        "canonical": "#0e6e4f",
+        "tonalRamp": [
+          "oklch(15% 0.080 164.7)",
+          "oklch(25% 0.080 164.7)",
+          "oklch(35% 0.097 164.7)",
+          "oklch(45% 0.097 164.7)",
+          "oklch(55% 0.097 164.7)",
+          "oklch(65% 0.097 164.7)",
+          "oklch(80% 0.097 164.7)",
+          "oklch(95% 0.080 164.7)"
+        ]
+      },
+      "edition-emerald-soft": {
+        "role": "primary-on",
+        "displayName": "Emerald Edition Soft Ink",
+        "canonical": "#d3eee4",
+        "note": "Secondary text on the Emerald Edition ground (>= 4.5:1)."
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The single uppercase page heading."
+      },
+      "brand": {
+        "displayName": "Wordmark",
+        "purpose": "MovieApp wordmark beside the logo."
+      },
+      "spine": {
+        "displayName": "Spine Lettering",
+        "purpose": "Vertical uppercase names on user spines; 1rem on cover spines."
+      },
+      "numeral": {
+        "displayName": "Edition Numeral",
+        "purpose": "Nº edition numbers, tabular."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Panel headings; editable film titles at 1.15rem."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "One sentence under a display heading, soft ink."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All working text, forms, buttons, facts, notices."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Film count at the foot of a user spine."
+      }
+    },
+    "shadows": [
+      {
+        "name": "cover-rest",
+        "value": "0 2px 6px rgba(22, 24, 29, 0.18)",
+        "purpose": "Every cover at rest."
+      },
+      {
+        "name": "cover-pulled",
+        "value": "10px 12px 22px -8px rgba(22, 24, 29, 0.45)",
+        "purpose": "A cover sliding out of its spine on hover/focus."
+      },
+      {
+        "name": "spine-lifted",
+        "value": "0 14px 20px -10px rgba(22, 24, 29, 0.55)",
+        "purpose": "A user spine raised off the shelf on hover/focus."
+      },
+      {
+        "name": "button-hover",
+        "value": "0 4px 12px rgba(22, 24, 29, 0.18)",
+        "purpose": "Filled buttons on hover; removed on press."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "All state transitions."
+      },
+      {
+        "name": "press",
+        "value": "0.15s",
+        "purpose": "Button press nudge (translateY 1px)."
+      },
+      {
+        "name": "state",
+        "value": "0.2s",
+        "purpose": "Border, background and hover-shadow changes."
+      },
+      {
+        "name": "spine-lift",
+        "value": "0.35s",
+        "purpose": "User spine rises 18px."
+      },
+      {
+        "name": "cover-slide",
+        "value": "0.45s",
+        "purpose": "Cover slides 10px and tilts 1.2deg from its spine."
+      },
+      {
+        "name": "spinner",
+        "value": "0.8s linear infinite",
+        "purpose": "Loading ring on a disabled submit button."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "none",
+        "purpose": "prefers-reduced-motion removes all transitions and animations."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "mobile",
+        "value": "560px",
+        "purpose": "max-width: two-up covers, shorter spines, stacked rename and facts."
+      }
+    ],
+    "focus": {
+      "value": "3px solid edition colour, 3px offset",
+      "purpose": "All focus-visible states."
+    },
+    "openOpportunities": [
+      "Criterion-style spine graphics",
+      "A new-edition slot at the end of the users shelf",
+      "World-bearing error and empty pages",
+      "Edition colour below the band on a user's page"
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main action; fills with the current edition colour (near-black where no user is in view).",
+      "html": "<button class=\"ds-btn\">Add user</button> <button class=\"ds-btn\" style=\"--ds-edition:#2b45b0\">Add movie</button>",
+      "css": ":host{--ds-spine:'Big Shoulders Display','Arial Narrow',sans-serif;--ds-text:'Schibsted Grotesk',system-ui,sans-serif;--ds-ease:cubic-bezier(0.16,1,0.3,1);}.ds-btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--ds-text);font-size:1rem;font-weight:700;line-height:1.2;padding:10px 18px;border-radius:4px;border:1px solid var(--ds-edition,#16181d);background:var(--ds-edition,#16181d);color:var(--ds-on-edition,#fff);cursor:pointer;text-decoration:none;transition:transform .15s var(--ds-ease),box-shadow .2s var(--ds-ease);}.ds-btn:hover{box-shadow:0 4px 12px rgba(22,24,29,.18);}.ds-btn:active{transform:translateY(1px);box-shadow:none;}.ds-btn:focus-visible{outline:3px solid var(--ds-edition,#16181d);outline-offset:3px;}"
+    },
+    {
+      "name": "Button on Edition Band",
+      "kind": "button",
+      "refersTo": "button-on-band",
+      "description": "Primary action inverted to white on the edition-coloured band.",
+      "html": "<div class=\"ds-band-demo\"><button class=\"ds-btn ds-btn-inv\">Add movie</button></div>",
+      "css": ":host{--ds-spine:'Big Shoulders Display','Arial Narrow',sans-serif;--ds-text:'Schibsted Grotesk',system-ui,sans-serif;--ds-ease:cubic-bezier(0.16,1,0.3,1);}.ds-btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--ds-text);font-size:1rem;font-weight:700;line-height:1.2;padding:10px 18px;border-radius:4px;border:1px solid var(--ds-edition,#16181d);background:var(--ds-edition,#16181d);color:var(--ds-on-edition,#fff);cursor:pointer;text-decoration:none;transition:transform .15s var(--ds-ease),box-shadow .2s var(--ds-ease);}.ds-btn:hover{box-shadow:0 4px 12px rgba(22,24,29,.18);}.ds-btn:active{transform:translateY(1px);box-shadow:none;}.ds-btn:focus-visible{outline:3px solid var(--ds-edition,#16181d);outline-offset:3px;}.ds-band-demo{background:#2b45b0;padding:20px;}.ds-btn-inv{background:#fff;color:#2b45b0;border-color:#fff;}"
+    },
+    {
+      "name": "Quiet and Danger Buttons",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "Quiet: white with hairline border. Danger: underlined red text, no fill.",
+      "html": "<button class=\"ds-btn-quiet\">Cancel</button> <button class=\"ds-btn-danger\">Delete</button>",
+      "css": ":host{--ds-spine:'Big Shoulders Display','Arial Narrow',sans-serif;--ds-text:'Schibsted Grotesk',system-ui,sans-serif;--ds-ease:cubic-bezier(0.16,1,0.3,1);}.ds-btn-quiet{font-family:var(--ds-text);font-size:1rem;font-weight:700;padding:10px 18px;border-radius:4px;border:1px solid #c9cfd6;background:#fff;color:#16181d;cursor:pointer;transition:border-color .2s var(--ds-ease);}.ds-btn-quiet:hover{border-color:#16181d;}.ds-btn-danger{font-family:var(--ds-text);font-size:1rem;font-weight:500;padding:10px 0;border:0;background:transparent;color:#a32637;text-decoration:underline;text-underline-offset:.2em;cursor:pointer;}.ds-btn-danger:hover{color:#7d1626;}.ds-btn-quiet:focus-visible,.ds-btn-danger:focus-visible{outline:3px solid #16181d;outline-offset:3px;}"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input-text",
+      "description": "White field with hairline border; darkens on hover, edition-coloured caret and focus ring.",
+      "html": "<input class=\"ds-input\" type=\"text\" placeholder=\"Name\">",
+      "css": ":host{--ds-spine:'Big Shoulders Display','Arial Narrow',sans-serif;--ds-text:'Schibsted Grotesk',system-ui,sans-serif;--ds-ease:cubic-bezier(0.16,1,0.3,1);}.ds-input{font-family:var(--ds-text);font-size:1rem;color:#16181d;background:#fff;border:1px solid #c9cfd6;border-radius:4px;padding:10px 12px;caret-color:#16181d;transition:border-color .2s var(--ds-ease);}.ds-input:hover{border-color:#4a515c;}.ds-input::placeholder{color:#69717c;}.ds-input:focus-visible{outline:3px solid #16181d;outline-offset:3px;}"
+    },
+    {
+      "name": "Inline Rename Field",
+      "kind": "input",
+      "refersTo": "input-text",
+      "description": "The film title is the input: borderless at rest, a field on hover or focus.",
+      "html": "<div class=\"ds-rename\"><input class=\"ds-rename-in\" type=\"text\" value=\"Good Will Hunting\" aria-label=\"Title\"><button class=\"ds-rename-btn\">Update</button></div>",
+      "css": ":host{--ds-spine:'Big Shoulders Display','Arial Narrow',sans-serif;--ds-text:'Schibsted Grotesk',system-ui,sans-serif;--ds-ease:cubic-bezier(0.16,1,0.3,1);}.ds-rename{display:flex;gap:8px;align-items:center;font-family:var(--ds-text);}.ds-rename-in{flex:1;font:inherit;font-weight:700;font-size:1.15rem;color:#16181d;border:1px solid transparent;border-radius:4px;background:transparent;padding:10px 12px 10px 0;}.ds-rename-in:hover,.ds-rename-in:focus{border-color:#c9cfd6;background:#fff;padding-left:12px;}.ds-rename-in:focus-visible{outline:3px solid #2b45b0;outline-offset:3px;}.ds-rename-btn{font:inherit;font-weight:600;background:transparent;border:0;padding:10px 0;color:#16181d;text-decoration:underline;text-underline-offset:.2em;cursor:pointer;}.ds-rename-btn:hover{color:#2b45b0;}"
+    },
+    {
+      "name": "Top Navigation",
+      "kind": "nav",
+      "refersTo": "brand",
+      "description": "Logo and uppercase wordmark left, text links right with a 2px ink underline for hover and current page.",
+      "html": "<header class=\"ds-top\"><a class=\"ds-brand\" href=\"#\">MovieApp</a><nav><a class=\"ds-nav\" href=\"#\" aria-current=\"page\">Users</a></nav></header>",
+      "css": ":host{--ds-spine:'Big Shoulders Display','Arial Narrow',sans-serif;--ds-text:'Schibsted Grotesk',system-ui,sans-serif;--ds-ease:cubic-bezier(0.16,1,0.3,1);}.ds-top{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:#e9ecef;}.ds-brand{font-family:var(--ds-spine);font-weight:800;font-size:1.9rem;text-transform:uppercase;letter-spacing:.01em;line-height:1;color:#16181d;text-decoration:none;}.ds-nav{font-family:var(--ds-text);font-weight:500;color:#16181d;text-decoration:none;padding:6px 2px;border-bottom:2px solid transparent;}.ds-nav:hover,.ds-nav[aria-current=page]{border-bottom-color:#16181d;}.ds-brand:focus-visible,.ds-nav:focus-visible{outline:3px solid #16181d;outline-offset:3px;}"
+    },
+    {
+      "name": "Notice",
+      "kind": "card",
+      "refersTo": "notice-success",
+      "description": "Flash message strip; success green on mint, error red on pink.",
+      "html": "<p class=\"ds-notice ds-ok\">Movie added.</p><p class=\"ds-notice ds-err\">OMDb found no movie with that title.</p>",
+      "css": ":host{--ds-spine:'Big Shoulders Display','Arial Narrow',sans-serif;--ds-text:'Schibsted Grotesk',system-ui,sans-serif;--ds-ease:cubic-bezier(0.16,1,0.3,1);}.ds-notice{font-family:var(--ds-text);font-weight:500;margin:0 0 8px;padding:10px 14px;border-radius:4px;}.ds-ok{background:#e2f2ea;color:#0e6e4f;}.ds-err{background:#fbe6e9;color:#a32637;}"
+    },
+    {
+      "name": "User Spine Shelf",
+      "kind": "custom",
+      "refersTo": "user-spine",
+      "description": "Users as edition-coloured spines in one row on a 14px plank; a spine rises on hover or focus.",
+      "html": "<ul class=\"ds-shelf\"><li><a class=\"ds-spine\" href=\"#\" style=\"--e:#2b45b0;--on:#fff;--soft:#dbe1fa\"><span class=\"ds-spine-t\">Deb</span><span class=\"ds-foot\"><span class=\"ds-no\">Nº 01</span>4 films</span></a></li><li><a class=\"ds-spine ds-tall\" href=\"#\" style=\"--e:#e0a526;--on:#16181d;--soft:#3b2c06\"><span class=\"ds-spine-t\">Alex</span><span class=\"ds-foot\"><span class=\"ds-no\">Nº 02</span>0 films</span></a></li><li><a class=\"ds-spine ds-wide\" href=\"#\" style=\"--e:#6a2c6e;--on:#fff;--soft:#ecd9ee\"><span class=\"ds-spine-t\">Mia</span><span class=\"ds-foot\"><span class=\"ds-no\">Nº 03</span>0 films</span></a></li></ul>",
+      "css": ":host{--ds-spine:'Big Shoulders Display','Arial Narrow',sans-serif;--ds-text:'Schibsted Grotesk',system-ui,sans-serif;--ds-ease:cubic-bezier(0.16,1,0.3,1);}.ds-shelf{list-style:none;margin:0;padding:28px 12px 0;display:flex;align-items:flex-end;gap:10px;border-bottom:14px solid #16181d;background:#e9ecef;}.ds-spine{display:flex;flex-direction:column;justify-content:space-between;align-items:center;width:84px;height:300px;padding:16px 8px 12px;background:var(--e);color:var(--on);text-decoration:none;border-radius:3px 3px 0 0;transition:transform .35s var(--ds-ease),box-shadow .35s var(--ds-ease);box-sizing:border-box;}.ds-tall{height:330px;}.ds-wide{height:280px;width:96px;}.ds-spine:hover,.ds-spine:focus-visible{transform:translateY(-18px);box-shadow:0 14px 20px -10px rgba(22,24,29,.55);}.ds-spine:focus-visible{outline:3px solid var(--e);outline-offset:3px;}.ds-spine-t{writing-mode:vertical-rl;transform:rotate(180deg);font-family:var(--ds-spine);font-weight:800;font-size:2rem;line-height:1;text-transform:uppercase;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-height:200px;}.ds-foot{display:grid;justify-items:center;gap:2px;width:100%;padding-top:10px;border-top:1px solid var(--soft);font-family:var(--ds-text);font-size:.78rem;color:var(--soft);}.ds-no{font-family:var(--ds-spine);font-weight:700;font-size:1.15rem;color:var(--on);font-variant-numeric:tabular-nums;}"
+    },
+    {
+      "name": "Edition Band",
+      "kind": "custom",
+      "refersTo": "edition-band",
+      "description": "Full-bleed page head in the user's edition colour with back link, display heading and edition number.",
+      "html": "<section class=\"ds-band\"><a class=\"ds-back\" href=\"#\"><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M19 12H5M11 18l-6-6 6-6\"/></svg>Back to Users</a><h1 class=\"ds-h1\">Movies for Deb</h1><p class=\"ds-meta\"><span>Nº 01</span> 4 films on the shelf</p></section>",
+      "css": ":host{--ds-spine:'Big Shoulders Display','Arial Narrow',sans-serif;--ds-text:'Schibsted Grotesk',system-ui,sans-serif;--ds-ease:cubic-bezier(0.16,1,0.3,1);}.ds-band{background:#2b45b0;color:#fff;padding:28px 16px 32px;font-family:var(--ds-text);}.ds-back{display:inline-flex;align-items:center;gap:6px;margin-bottom:18px;font-weight:500;color:#fff;text-underline-offset:.2em;}.ds-icon{width:1em;height:1em;flex:none;}.ds-h1{margin:0;font-family:var(--ds-spine);font-weight:800;text-transform:uppercase;font-size:clamp(2.6rem,7vw,5.2rem);line-height:.92;letter-spacing:.005em;}.ds-meta{margin:12px 0 0;color:#dbe1fa;font-size:1.05rem;}.ds-meta span{font-family:var(--ds-spine);font-weight:700;font-size:1.3rem;color:#fff;margin-right:8px;font-variant-numeric:tabular-nums;}"
+    },
+    {
+      "name": "Edition Cover",
+      "kind": "custom",
+      "refersTo": "cover-spine",
+      "description": "Cover with an attached edition spine strip; slides out from its spine on hover or focus.",
+      "html": "<div class=\"ds-ed\" tabindex=\"0\"><div class=\"ds-wrap\"><span class=\"ds-cs\"><span class=\"ds-cs-t\">Titanic</span><span class=\"ds-cs-no\">Nº 001</span></span><div class=\"ds-cover\"><span>Titanic</span></div></div></div>",
+      "css": ":host{--ds-spine:'Big Shoulders Display','Arial Narrow',sans-serif;--ds-text:'Schibsted Grotesk',system-ui,sans-serif;--ds-ease:cubic-bezier(0.16,1,0.3,1);}.ds-ed{width:230px;}.ds-ed:focus-visible{outline:3px solid #2b45b0;outline-offset:3px;}.ds-wrap{position:relative;display:flex;padding-bottom:20px;}.ds-wrap::after{content:'';position:absolute;left:-14px;right:-14px;bottom:0;height:8px;background:#16181d;}.ds-cs{flex:0 0 34px;display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:10px 0 8px;background:#2b45b0;color:#fff;border-radius:2px 0 0 2px;}.ds-cs-t{writing-mode:vertical-rl;transform:rotate(180deg);font-family:var(--ds-spine);font-weight:800;font-size:1rem;text-transform:uppercase;letter-spacing:.03em;white-space:nowrap;}.ds-cs-no{font-family:var(--ds-spine);font-weight:700;font-size:.85rem;font-variant-numeric:tabular-nums;}.ds-cover{width:calc(100% - 34px);aspect-ratio:2/3;display:grid;place-items:center;background:#dde1e6;color:#4a515c;font-family:var(--ds-spine);font-weight:800;font-size:1.6rem;text-transform:uppercase;border-radius:0 2px 2px 0;box-shadow:0 2px 6px rgba(22,24,29,.18);transform-origin:left center;transition:transform .45s var(--ds-ease),box-shadow .45s var(--ds-ease);}.ds-ed:hover .ds-cover,.ds-ed:focus-within .ds-cover{transform:translateX(10px) rotate(1.2deg);box-shadow:10px 12px 22px -8px rgba(22,24,29,.45);}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Collector's Edition Shelf",
+    "overview": "**Creative North Star: \"The Collector's Edition Shelf\"**\n\nA favourites list is a shelf of numbered editions, not a streaming catalogue. The users page shows people as tall, flat, saturated book spines standing on a dark plank; opening one paints the page head in that person's edition colour and lays their films out as covers, each with a narrow spine strip attached at its left edge carrying the title in vertical capitals and an edition number. The rest of the world stays quiet: a cool grey wall, white working surfaces, near-black ink. Colour belongs to people, and posters supply everything else.\n\nDensity is calm and generous: one shelf row on the users page, a four-up cover grid on desktop and two-up on a 390px phone. Lettering carries the identity: a condensed uppercase display face for everything that reads as printed on a spine (headings, the wordmark, spine titles, edition numbers) over a sturdy grotesk for all working text. Motion is physical and small: spines lift off the shelf, covers slide out from their spine.\n\nThe world rejects the dark poster-grid default and the black-and-red streaming look (a binding brand commitment in PRODUCT.md). Near-black appears only as ink, the shelf plank and the default edition, never as a page ground.",
+    "keyCharacteristics": [
+      "Cool grey wall (`wall`) as the only page ground; white for working surfaces.",
+      "One saturated edition colour per user, assigned by user id modulo 8, painting that user's spine, band, cover spines, primary buttons, focus ring and text selection.",
+      "Condensed uppercase spine lettering (Big Shoulders Display) with tabular numerals; Schibsted Grotesk for everything operable.",
+      "Edition numbers with a `Nº` prefix: two digits for users (`Nº 01`), three digits for films in id order (`Nº 001`).",
+      "Dark plank lines under every shelf row: a 14px border under the users shelf, an 8px continuous plank under each cover row.",
+      "Signature move: covers slide out from their spine on hover and focus."
+    ],
+    "rules": [
+      {
+        "name": "The Colour Belongs To People Rule",
+        "body": "Saturated colour appears only as a user's edition. Chrome, panels and page grounds stay neutral; a new surface earns colour only by belonging to someone.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Edition Per Page Rule",
+        "body": "A user's page carries exactly one edition colour, set once on the page body; every edition-tinted element on that page inherits it.",
+        "section": "colors"
+      },
+      {
+        "name": "The Spine Lettering Rule",
+        "body": "Big Shoulders Display is for things printed on a spine or a title page: page headings, the wordmark, spine titles and edition numbers. Forms, buttons, facts and messages are always Schibsted Grotesk.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Number Rule",
+        "body": "Every edition number, count and year is set with tabular numerals so stacked numbers align.",
+        "section": "typography"
+      },
+      {
+        "name": "The Shelf Row Rule",
+        "body": "Users stand in one row on one plank; the row scrolls, it never wraps into a grid.",
+        "section": "layout"
+      },
+      {
+        "name": "The Picked-Up Rule",
+        "body": "Spines, panels and buttons are flat at rest. Lift (translate plus shadow) is a response to hover or focus, never a resting state; covers keep only their faint print shadow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do give every user exactly one edition colour from the eight, by `user.id % 8`, and let that colour paint their spine, band, cover spines and primary actions.",
+      "Do set spine and heading text in Big Shoulders Display, uppercase, and every edition number and count with tabular numerals and the `Nº` prefix.",
+      "Do stand spines and covers on a dark plank, continuous across each row.",
+      "Do keep lift as a hover/focus response: spines rise 18px, covers slide 10px out from their spine; all motion uses the `cubic-bezier(0.16, 1, 0.3, 1)` ease-out and stops under reduced motion.",
+      "Do draw icons as inline SVG line art that inherits text colour.",
+      "Do pair each edition with a text colour that keeps at least 4.5:1, including the soft secondary ink."
+    ],
+    "donts": [
+      "Don't use a dark page ground or a black-and-red streaming palette; near-black is ink and plank, never the room.",
+      "Don't use saturated colour on chrome, panels or page grounds that do not belong to a user.",
+      "Don't add inset strips, bevels or gradients to spines; spines are flat colour.",
+      "Don't use Unicode arrows or glyph characters as icons.",
+      "Don't set forms, buttons or running text in the condensed display face.",
+      "Don't wrap the users shelf into a grid; it is one scrolling row.",
+      "Don't rely on an edition-coloured focus ring where the ground is the same edition colour (the band); a ring must contrast with what it sits on."
+    ]
+  }
+}
