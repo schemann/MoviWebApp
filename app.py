@@ -62,6 +62,13 @@ def create_user():
     return redirect(url_for('index'))
 
 
+@app.route('/users/<int:user_id>')
+def show_user(user_id):
+    """Short URL for a user; leads to their movie list."""
+    get_user_or_404(user_id)
+    return redirect(url_for('list_movies', user_id=user_id))
+
+
 @app.route('/users/<int:user_id>/movies', methods=['GET'])
 def list_movies(user_id):
     """Show the favorite movies of one user."""
