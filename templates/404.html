@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %}Not found - MovieApp{% endblock %}
+{% block content %}
+  <h1>Page not found</h1>
+  <p>This page, user or movie does not exist.</p>
+  <p><a href="{{ url_for('index') }}">&larr; Back to Users</a></p>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Users - MovieApp{% endblock %}
+{% block content %}
+  <h1>Who is watching?</h1>
+  {% if users %}
+  <ul class="users">
+    {% for user in users %}
+    <li><a class="user-card" href="{{ url_for('list_movies', user_id=user.id) }}">{{ user.name }}</a></li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="empty">No users yet. Add the first one below.</p>
+  {% endif %}
+
+  <section class="card form-card">
+    <h2>Add a user</h2>
+    <form action="{{ url_for('create_user') }}" method="POST" class="inline-form">
+      <label class="visually-hidden" for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Name" required maxlength="100">
+      <button type="submit">Add user</button>
+    </form>
+  </section>
+{% endblock %}
