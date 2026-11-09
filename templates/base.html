@@ -9,8 +9,11 @@
   <body>
     <header class="site-header">
       <a class="brand" href="{{ url_for('index') }}">🎬 MovieApp</a>
+      <nav class="site-nav">
+        <a href="{{ url_for('index') }}">Users</a>
+      </nav>
     </header>
-    <main>
+    <main class="container">
       {% for category, message in get_flashed_messages(with_categories=true) %}
       <p class="notice {{ category }}">{{ message }}</p>
       {% endfor %}
