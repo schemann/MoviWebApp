@@ -5,7 +5,13 @@
   {% if users %}
   <ul class="users">
     {% for user in users %}
-    <li><a class="user-card" href="{{ url_for('list_movies', user_id=user.id) }}">{{ user.name }}</a></li>
+    <li>
+      <a class="user-card" href="{{ url_for('list_movies', user_id=user.id) }}">
+        <span class="avatar" aria-hidden="true">{{ user.name[:1]|upper }}</span>
+        <span class="user-name">{{ user.name }}</span>
+        <span class="user-meta">{{ user.movies|length }} movie{{ "" if user.movies|length == 1 else "s" }}</span>
+      </a>
+    </li>
     {% endfor %}
   </ul>
   {% else %}

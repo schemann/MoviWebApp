@@ -8,7 +8,10 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="{{ url_for('index') }}">🎬 MovieApp</a>
+      <a class="brand" href="{{ url_for('index') }}">
+        <img src="{{ url_for('static', filename='logo.svg') }}" alt="" width="44" height="44">
+        <span>MovieApp</span>
+      </a>
       <nav class="site-nav">
         <a href="{{ url_for('index') }}">Users</a>
       </nav>
@@ -19,5 +22,18 @@
       {% endfor %}
       {% block content %}{% endblock %}
     </main>
+    <script>
+      // Disable the button and show a hint while a slow form (OMDb lookup) is sent.
+      document.querySelectorAll("form[data-loading]").forEach(function (form) {
+        form.addEventListener("submit", function () {
+          var button = form.querySelector("button[type=submit]");
+          if (button) {
+            button.disabled = true;
+            button.classList.add("loading");
+            button.textContent = form.dataset.loading;
+          }
+        });
+      });
+    </script>
   </body>
 </html>
