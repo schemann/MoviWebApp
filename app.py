@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv
 from flask import Flask, abort, flash, redirect, render_template, request, url_for
 
-from data_manager import DataManager
+from data_manager import DatabaseError, DataManager
 from models import db, Movie
 from omdb import OmdbError, fetch_movie
 
@@ -57,6 +57,9 @@ def create_user():
         user = data_manager.create_user(request.form.get('name', ''))
     except ValueError as error:
         flash(str(error), 'error')
+    except DatabaseError as error:
+        app.logger.exception("Creating a user failed")
+        flash(str(error), 'error')
     else:
         flash(f"Welcome, {user.name}!", 'success')
     return redirect(url_for('index'))
@@ -90,8 +93,13 @@ def add_movie(user_id):
     except OmdbError as error:
         flash(str(error), 'error')
         return redirect(url_for('list_movies', user_id=user_id))
-    movie = data_manager.add_movie(Movie(user_id=user_id, **details))
-    flash(f"'{movie.name}' was added.", 'success')
+    try:
+        movie = data_manager.add_movie(Movie(user_id=user_id, **details))
+    except DatabaseError as error:
+        app.logger.exception("Adding a movie failed")
+        flash(str(error), 'error')
+    else:
+        flash(f"'{movie.name}' was added.", 'success')
     return redirect(url_for('list_movies', user_id=user_id))
 
 
@@ -103,6 +111,9 @@ def update_movie(user_id, movie_id):
         movie = data_manager.update_movie(movie_id, request.form.get('title', ''))
     except ValueError as error:
         flash(str(error), 'error')
+    except DatabaseError as error:
+        app.logger.exception("Updating a movie failed")
+        flash(str(error), 'error')
     else:
         flash(f"Title changed to '{movie.name}'.", 'success')
     return redirect(url_for('list_movies', user_id=user_id))
@@ -113,8 +124,13 @@ def delete_movie(user_id, movie_id):
     """Remove a movie from the user's favorites."""
     movie = get_user_movie_or_404(user_id, movie_id)
     name = movie.name
-    data_manager.delete_movie(movie_id)
-    flash(f"'{name}' was removed.", 'success')
+    try:
+        data_manager.delete_movie(movie_id)
+    except DatabaseError as error:
+        app.logger.exception("Deleting a movie failed")
+        flash(str(error), 'error')
+    else:
+        flash(f"'{name}' was removed.", 'success')
     return redirect(url_for('list_movies', user_id=user_id))
 
 
@@ -122,6 +138,12 @@ def delete_movie(user_id, movie_id):
 def page_not_found(_error):
     """Show a friendly page for unknown URLs, users and movies."""
     return render_template('404.html'), 404
+
+
+@app.errorhandler(405)
+def method_not_allowed(_error):
+    """Show a friendly page when a form URL is opened directly in the browser."""
+    return render_template('405.html'), 405
 
 
 @app.errorhandler(500)

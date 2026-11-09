@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %}Not allowed - MovieApp{% endblock %}
+{% block content %}
+  <h1>Not allowed</h1>
+  <p>This address only works through the buttons and forms of the app.</p>
+  <p><a href="{{ url_for('index') }}">&larr; Back to Users</a></p>
+{% endblock %}

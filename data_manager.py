@@ -1,7 +1,22 @@
 """DataManager: all reads and writes of users and movies go through this class."""
 from typing import List, Optional
 
+from sqlalchemy.exc import SQLAlchemyError
+
 from models import db, User, Movie
+
+
+class DatabaseError(Exception):
+    """Raised when a write to the database fails; the session has been rolled back."""
+
+
+def _commit():
+    """Commit the session; on failure roll back and raise DatabaseError."""
+    try:
+        db.session.commit()
+    except SQLAlchemyError as error:
+        db.session.rollback()
+        raise DatabaseError("The database could not save the change.") from error
 
 
 class DataManager:
@@ -14,7 +29,7 @@ class DataManager:
             raise ValueError("User name must not be empty.")
         user = User(name=name)
         db.session.add(user)
-        db.session.commit()
+        _commit()
         return user
 
     def get_users(self) -> List[User]:
@@ -45,7 +60,7 @@ class DataManager:
         if self.get_user(movie.user_id) is None:
             raise ValueError(f"There is no user with id {movie.user_id}.")
         db.session.add(movie)
-        db.session.commit()
+        _commit()
         return movie
 
     def update_movie(self, movie_id: int, new_title: str) -> Optional[Movie]:
@@ -60,7 +75,7 @@ class DataManager:
         if movie is None:
             return None
         movie.name = new_title
-        db.session.commit()
+        _commit()
         return movie
 
     def delete_movie(self, movie_id: int) -> bool:
@@ -69,5 +84,5 @@ class DataManager:
         if movie is None:
             return False
         db.session.delete(movie)
-        db.session.commit()
+        _commit()
         return True
